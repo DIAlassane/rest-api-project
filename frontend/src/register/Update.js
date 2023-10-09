@@ -1,16 +1,30 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from "react"
+import axios from "axios"
+import { Link, useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
-import "../style/register.css"
 
- function Register(){
+
+function Update() {
     const [name, setName] = useState()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
+    const {id} = useParams()
     const navigate = useNavigate()
 
-    const handleSubmit = (e) => {
-        axios.post('http://localhost:3001/register', {name, email, password})
+
+    useEffect(() => {
+        axios.get('http://localhost:3001/getuser/'+id)
+        .then(result=> {
+            console.log(result)
+            setName(result.data.name)
+            setEmail(result.data.email)
+            setPassword(result.data.password)
+        })
+        .catch(err => console.log(err))
+    }, [])
+
+    const Update = (e) => {
+        axios.put('http://localhost:3001/update/'+id, {name, email, password})
         .then(result=> {
             console.log(result)
             navigate('/')
@@ -18,30 +32,24 @@ import "../style/register.css"
         .catch(err => console.log(err))
 
     }
-
     return(
         <>
-        <h2>Register</h2>
-        <div className="register">
-        <form  className="myRegister" action="" onSubmit={handleSubmit}>
-        <label for="firstname">Nom: </label>
-            <input  type="text"
+        <form action="" onSubmit={Update}>
+            <input type="text"
             name="name" placeholder="nom"
             onChange={(e)=> setName(e.target.value)}/>
-            <label for="email">Email: </label>
              <input type="text"
             name="email" placeholder="email"
             onChange={(e)=> setEmail(e.target.value)}/>
-            <label for="password">Mot de passe: </label>
              <input type="text"
             name="password" placeholder="mot de passe"
             onChange={(e)=> setPassword(e.target.value)}/>
 
             <button type="submit">Soumettre</button>
         </form>
-        </div>
+        <Link to='/'>PAge principal</Link>
         </>
-    )
+    );
 }
 
-export default Register;
+export default Update;
