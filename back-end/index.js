@@ -1,45 +1,44 @@
-const express = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
-const UtilisateurModel = require('./model/utilisateur')
+// Importer les modules nécessaires
+const express = require('express'); // Importer Express
+const cors = require('cors'); // Middleware CORS pour autoriser les requêtes cross-origin
+const mongoose = require('mongoose'); // Mongoose pour la gestion de la base de données MongoDB
+const UtilisateurModel = require('./model/utilisateur'); // Importer le modèle utilisateur
 
-//initialiser
-const app = express()
-app.use(express.json())
-app.use(cors())
+// Initialiser l'application Express
+const app = express(); // Créer une instance d'Express
+app.use(express.json()); // Utiliser JSON comme format de données
+app.use(cors()); // Activer CORS pour autoriser les requêtes depuis d'autres domaines
 
-mongoose.connect("mongodb://localhost:27017/rest") //connecter la base de donnée
+// Connecter à la base de données MongoDB
+mongoose.connect("mongodb://localhost:27017/rest"); // Connexion à la base de données MongoDB
 
+// Définition des routes API
 
-//READ
+// Route pour lire (READ) tous les utilisateurs
 app.get('/', (req, res) => {
     UtilisateurModel.find({})
     .then(clients => res.json(clients))
     .catch(err => res.json(err))
 })
 
-
-//CREATE
+// Route pour créer (CREATE) un nouvel utilisateur
 app.post('/register',(req, res)=>{
     UtilisateurModel.create(req.body)
     .then(clients => res.json(clients))
     .catch(err => res.json(err))
-} 
-) 
+})
 
-
-//GETUSER
+// Route pour obtenir (GETUSER) un utilisateur par ID
 app.get('/getuser/:id',(req, res)=>{
-    const id = req.params.id; // recupérer les paramètres d'une page vers une autre
+    const id = req.params.id; // Récupérer les paramètres de l'URL
     UtilisateurModel.findById({_id:id})
     .then(clients => res.json(clients))
     .catch(err => res.json(err))
-} 
-) 
+})
 
-//UPDATE
+// Route pour mettre à jour (UPDATE) un utilisateur par ID
 app.put('/update/:id', (req, res)=>{
-    const id = req.params.id;
+    const id = req.params.id; // Récupérer l'ID depuis l'URL
     UtilisateurModel.findByIdAndUpdate({_id:id}, {
         name : req.body.name,
         email : req.body.email,
@@ -47,39 +46,35 @@ app.put('/update/:id', (req, res)=>{
     })
     .then(clients => res.json(clients))
     .catch(err => res.json(err))
-}) 
+})
 
-
-//DELETE
+// Route pour supprimer (DELETE) un utilisateur par ID
 app.delete('/delete/:id',(req, res)=>{
-    const id = req.params.id;
+    const id = req.params.id; // Récupérer l'ID depuis l'URL
     UtilisateurModel.findByIdAndDelete({_id:id})
-    .then(res=> res.json(res))
+    .then(result => res.json(result))
     .catch(err => res.json(err))
-} 
-) 
+})
 
-
+// Route pour gérer l'authentification (LOGIN) des utilisateurs
 app.post('/login',(req, res)=>{
-    const {email, password} = req.body; // recupérer les paramètres d'une page vers une autre
+    const {email, password} = req.body; // Récupérer les paramètres de la requête
     UtilisateurModel.findOne({email})
     .then(clients => {
         if(clients) {
             if(clients.password === password) {
-                res.json("Success")
-                
+                res.json("Success") // Authentification réussie
             } else {
-                res.json("the password is incoresct")
+                res.json("the password is incorrect") // Mot de passe incorrect
             } 
         } else {
-                res.json("aucun natch")
-            }
+            res.json("aucun match") // Aucune correspondance trouvée pour l'e-mail
+        }
     })
     .catch(err => res.json(err))
-} 
-) 
-
-app.listen(3001, () => {
-    console.log("server sur le port 3001");
 })
 
+// Lancer le serveur Express sur le port 3001
+app.listen(3001, () => {
+    console.log("Serveur en cours d'exécution sur le port 3001");
+})

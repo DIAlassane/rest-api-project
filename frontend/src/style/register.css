@@ -42,8 +42,9 @@
 }
 
 
-a{
-    color: black;
+ .bouttons a {
+    color: white;
+    text-decoration: none;
 }
 
 .bouttons 
@@ -64,5 +65,17 @@ a{
     width: 150px;
     margin: 30px;
 }
-    
+
+@media (max-width: 768px) {
+    .myRegister{
+    width: 300px; 
+  }
+
+  .myRegister input{
+    width: 240px;
+  }
+  .bouttons{
+    width: 350px;
+  }
+}
 

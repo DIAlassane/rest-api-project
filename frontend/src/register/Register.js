@@ -39,7 +39,7 @@ import { Link } from "react-router-dom";
             onChange={(e)=> setPassword(e.target.value)}/>
                 <div className="bouttons">
             <button type="submit">Soumettre</button>
-            <button > <Link to="/">Retour à la liste</Link></button>
+            <button > <Link to="/admin">Retour à la liste</Link></button>
             </div>
         </form>
         </div>

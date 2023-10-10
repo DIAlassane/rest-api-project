@@ -5,13 +5,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
+    background: rgb(99,107,108);
+    background: linear-gradient(132deg, rgba(99,107,108,1) 0%, rgba(203,194,175,1) 44%, rgba(251,251,251,1) 94%);
     color: black;
 }
 
 .myAdmin a{
     text-decoration: none;
-    color: black;
+    color:white;
 }
 
 .myAdmin h2{
@@ -83,3 +84,10 @@ table {
    
     
 }
+
+@media (max-width: 768px) {
+   .myTab{
+    width: 577px;
+   }
+  }
+  
