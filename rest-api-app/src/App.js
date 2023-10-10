@@ -3,6 +3,8 @@ import Users from './components/Users';
 import CreateUser from './components/CreateUser';
 import UpdateUser from './components/UpdateUser';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomeClient from './Frontclient/HomeClient';
+import FrontUserCard from './components/FrontUserCard';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Route path='/' element={<Users />}></Route>
         <Route path='/create' element={<CreateUser />}></Route>
         <Route path='/update/:id' element={<UpdateUser />}></Route>
+        <Route path='/homeClient' element={<HomeClient />}></Route>
+        <Route path='/frontUserCard' element={<FrontUserCard />}></Route>        
       </Routes>
       </BrowserRouter>
     </div>

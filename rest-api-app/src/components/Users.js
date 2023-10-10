@@ -36,7 +36,7 @@ function Users() {
                         <th>Année de sortie</th>
                         <th>Nb de porte</th>
                         <th>Carburant</th>
-                        <th>Url</th>
+                        <th style={{width: 50}}>Url</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,7 +51,7 @@ function Users() {
                             <td>{user.annee}</td>
                             <td>{user.porte}</td>
                             <td>{user.carburant}</td>
-                            <td>{user.url}</td>
+                            <td style={{width: 50}}>{user.url}</td>
                             <td>
                                 <Link to={`/update/${user._id}`}>MAJ</Link>
                                 <button className='delete' onClick={(e) => handleDelete(user._id)}>
@@ -63,6 +63,7 @@ function Users() {
                     }
                 </tbody>
             </table>
+            <Link to='/homeClient'>FrontUsers</Link>
         </div>
     </div>
   )
