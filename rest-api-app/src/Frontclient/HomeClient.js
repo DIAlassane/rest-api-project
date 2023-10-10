@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import FrontUserCard from '../components/FrontUserCard'
 import '../css/HomeClient.css'
-import Navbar from '../nav-footer/Navbar'
+import Navbar from '../nav-footer/navbar'
+import Footer from '../nav-footer/Footer'
 
 function HomeClient() {
     const [search, setSearch] = useState()
@@ -71,6 +72,7 @@ function HomeClient() {
         </div>
 
     </div>
+    <Footer/>
     </div>
   )
 }

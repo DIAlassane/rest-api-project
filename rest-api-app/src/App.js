@@ -15,7 +15,7 @@ function App() {
         <Route path='/create' element={<CreateUser />}></Route>
         <Route path='/update/:id' element={<UpdateUser />}></Route>
         <Route path='/homeClient' element={<HomeClient />}></Route>
-        <Route path='/frontUserCard' element={<FrontUserCard />}></Route>        
+        <Route path='/frontUserCard/:id' element={<FrontUserCard />}></Route>   
       </Routes>
       </BrowserRouter>
     </div>

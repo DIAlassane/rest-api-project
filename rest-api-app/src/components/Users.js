@@ -32,9 +32,9 @@ function Users() {
                         <th>Marque</th>
                         <th>Modèle</th>
                         <th>Prix</th>
-                        <th>Boîte de Vitesse</th>
-                        <th>Année de sortie</th>
-                        <th>Nb de porte</th>
+                        <th>B/V</th>
+                        <th>Sortie</th>
+                        <th>Nb Porte</th>
                         <th>Carburant</th>
                         <th style={{width: 50}}>Url</th>
                     </tr>

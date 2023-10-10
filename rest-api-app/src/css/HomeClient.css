@@ -8,6 +8,9 @@
     display: flex;
     background-color: #8e8a8a92;
     padding-top: 2rem;
+    min-height: 78vh;
+    max-height: 1500vh;
+    padding-bottom: 5rem;
 }
 
 .gauche {
