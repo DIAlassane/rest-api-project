@@ -21,7 +21,7 @@ import { Link } from "react-router-dom";
     }
 
     return(
-        <>
+        <div className="mainRegister">
         <h2>Register</h2>
         <div className="register">
         <form  className="myRegister" action="" onSubmit={handleSubmit}>
@@ -37,13 +37,13 @@ import { Link } from "react-router-dom";
              <input type="text"
             name="password" placeholder="mot de passe"
             onChange={(e)=> setPassword(e.target.value)}/>
-                <div className="mesBouttons">
+                <div className="bouttons">
             <button type="submit">Soumettre</button>
             <button > <Link to="/">Retour à la liste</Link></button>
             </div>
         </form>
         </div>
-        </>
+        </div>
     )
 }
 

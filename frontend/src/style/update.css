@@ -1,0 +1,21 @@
+.mainUpdate form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+}
+
+.mainUpdate h2{
+    text-align: center;
+}
+
+
+.mainUpdate input{
+    width: 40%;
+}
+
+.chemins{
+    text-align: center;
+}

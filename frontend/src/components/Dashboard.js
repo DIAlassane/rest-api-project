@@ -6,15 +6,18 @@ import "../style/dashboard.css"
 
 export default function Dashboard() {
     return (
-        <>
+        <div className="mainDashboard">
             <h2>Dashboard</h2>
 
             <div className="dashboard">
-                <div>
-                    <form> <Link to="/admin">Admin</Link></form>
+                <div className="myLink">
+                    
+                    <form > <Link to="/admin"> Liste Admins</Link></form>
+                    <form > <Link to="/admin"> Liste Admins</Link></form>
+                    
                 </div>
             </div>
         
-        </>
+        </div>
     );
 }
