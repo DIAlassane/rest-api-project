@@ -6,6 +6,8 @@
 
 .gg {
     display: flex;
+    background-color: #8e8a8a92;
+    padding-top: 2rem;
 }
 
 .gauche {
@@ -40,11 +42,12 @@
 }
 
 .container {
-    padding: 2rem;
+    padding: 1rem;
     width: 80%;
 }
 
 .grid {
-    display: flex;
-    flex-flow: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
 }

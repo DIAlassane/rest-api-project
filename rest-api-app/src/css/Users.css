@@ -32,7 +32,7 @@
 
 table {
     width: 90%;
-    margin-left: 5%;
+    margin-left: 2%;
     margin-top: 0.5rem;
 }
 
@@ -66,4 +66,13 @@ td:last-child {
 .delete:hover {
     background-color: #691b1b;
     border-radius: 0;
+}
+
+tr td {
+    font-size: 0.8rem;
+}
+
+tr td:nth-child(8){
+    width: 20%;
+    font-size: 0.5rem;
 }

@@ -5,7 +5,6 @@ function FrontUserCard({user}) {
 
   return (
     <div>
-    <Link to='/'>Users</Link>
         <div>
           <div className='card'>
               <img src={user.url} alt="" />
