@@ -59,6 +59,27 @@ app.delete('/delete/:id',(req, res)=>{
 } 
 ) 
 
+
+app.post('/login',(req, res)=>{
+    const {email, password} = req.body; // recupérer les paramètres d'une page vers une autre
+    UtilisateurModel.findOne({email})
+    .then(clients => {
+        if(clients) {
+            if(clients.password === password) {
+                res.json("Success")
+                
+            } else {
+                res.json("the password is incoresct")
+            } 
+        } else {
+                res.json("aucun natch")
+            }
+    })
+    .catch(err => res.json(err))
+} 
+) 
+
 app.listen(3001, () => {
     console.log("server sur le port 3001");
 })
+

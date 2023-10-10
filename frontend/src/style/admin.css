@@ -16,8 +16,17 @@ text-align: center;
 
 .add {
     text-align: center;
-    margin: auto;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
 
+.add form{
+    width: 200px;
+}
+
+.add svg{
+    margin-left: 10px;
 }
 
 th {
@@ -64,6 +73,7 @@ table {
     background-color: red;
     color: white;
     border-radius: 10px;
+    border: none;
    
     
 }

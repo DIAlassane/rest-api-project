@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../style/register.css"
+import { Link } from "react-router-dom";
 
  function Register(){
     const [name, setName] = useState()
@@ -36,8 +37,10 @@ import "../style/register.css"
              <input type="text"
             name="password" placeholder="mot de passe"
             onChange={(e)=> setPassword(e.target.value)}/>
-
+                <div className="mesBouttons">
             <button type="submit">Soumettre</button>
+            <button > <Link to="/">Retour à la liste</Link></button>
+            </div>
         </form>
         </div>
         </>

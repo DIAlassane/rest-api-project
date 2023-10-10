@@ -1,0 +1,59 @@
+.bodyLogin{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.loginContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.titreCo {
+color: white;
+font-size: xx-large;
+}
+
+
+.login form {
+    width: 50%;
+    margin-left: 25%;
+    background-color: #609b60;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.myLogin{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+form input{
+    width: 66%;
+    padding: 0.4rem;
+}
+
+form label{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.mesBouttons{
+    align-self: center;
+    margin: 20px;
+}
+
+.seConnecter{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: black;
+}
