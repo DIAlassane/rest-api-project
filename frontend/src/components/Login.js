@@ -7,23 +7,23 @@ import { useNavigate } from "react-router-dom";
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate("/")
+    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post('http://localhost:3001/login', { email, password })
             .then(result => {
-                console.log(result);
+                console.log(result);navigate("/dashboard")
+                    window.location.reload();
                 if (result.data === "success") {
                     console.log(result.data)
-                    navigate("/")
-                    // navigate('/dashboard')
+                    
                 }
             })
             .catch(err => console.log(err));
 
-        navigate("/dashboard")
-        window.location.reload();
+       // navigate("/dashboard")
+        //window.location.reload();
     }
 
     return (

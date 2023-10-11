@@ -26,7 +26,7 @@ function Admin() {
 
     }
     return (
-        <>
+        <div className="all">
             <div className="myAdmin">
                 <h2>Liste des Admins</h2>
 
@@ -63,7 +63,7 @@ function Admin() {
                     </table>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
