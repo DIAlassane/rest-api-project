@@ -23,6 +23,7 @@ function Users() {
 
   return (
     <div>
+        <a href="/dashboard">Dashboard</a>
         <div className='carlist'>
             <h2>Liste de nos voitures</h2>
             <Link to="/create" >Ajouter +</Link>

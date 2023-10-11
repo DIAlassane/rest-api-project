@@ -32,6 +32,7 @@ function Admin() {
 
                 <div className="add"><form>
                     <Link to="/register">Ajouter un admin<Icon icon="zondicons:add-outline" color="green" width="20px" /></Link></form>
+                    <a href="/dashboard">Dashboard</a>
                 </div>
                 <div className="myTab">
                     <table>
