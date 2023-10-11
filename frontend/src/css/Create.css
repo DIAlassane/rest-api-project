@@ -17,14 +17,14 @@
     border-radius: 5px 5px 0 0;
 }
 
-form {
+.form {
     width: 80%;
     margin: 5% 10%;
     justify-content: center;
     text-align: center;
 }
 
-form h2 {
+.form h2 {
     font-size: 1.7rem;
     padding: 1rem;
     font-weight: 900;
@@ -47,7 +47,7 @@ input {
     color: black;
 }
 
-form button {
+.form button {
     padding: 0.3rem 5rem;
     margin-top: 1.5rem;
     border-radius: 5px;
@@ -56,6 +56,6 @@ form button {
     transition: 1.5s ease-in-out;
 }
 
-form button:hover {
+.form button:hover {
     color: white;
 }

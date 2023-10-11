@@ -1,7 +1,6 @@
 .dashboard{
-    background-color: rgb(179, 176, 176);
-    height: 600px;
-
+    background-color: rgb(13 13 13);
+    height: 100vh;
 }
 .dashboard a{
     text-decoration: none;
@@ -9,18 +8,24 @@
 
 .mainDashboard h2{
     text-align: center;
-
+    color: white;
 }
 
-.dashboard form{
+.dashboard button{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     border-radius: 10px;
     background-color:white;
-    width: 200px;
+    width: 300px;
     height: 40px;
     text-align: center;
-    
+    border: none;
+}
+
+.dashboard button:hover{
+    background-color:rgb(46, 66, 35); 
+    font-size: larger;
+    color: white;
 }
 
 .myLink{
@@ -28,11 +33,22 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 200px;
+    height: 300px;
 
 }
 
 .myLink a{
     color: black;
+}
+
+.myLink a:hover{
+    color: whitesmoke;
+}
+
+.headerDash{
+    background-image: url("../media/bgHeader2.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 250px;
 }
 

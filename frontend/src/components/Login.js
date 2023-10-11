@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../style/login.css"; // Assurez-vous d'importer vos styles
 import { useNavigate } from "react-router-dom";
+import Footer from "../nav-footer/Footer";
 
 
 function Login() {
@@ -53,6 +54,8 @@ function Login() {
                         </form>
                     </div>
                 </div>
+                <Footer/>
+
             </div>
         </>
     )
