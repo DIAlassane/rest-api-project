@@ -16,7 +16,7 @@ function CreateUser() {
 
   const Submit = (e) => {
     e.preventDefault()
-    axios.post("http://localhost:3001/createUser", {
+    axios.post("http://localhost:3002/createUser", {
       marque,
       modele,
       prix,

@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb://127.0.0.1:27017/crud");
+mongoose.connect("mongodb://127.0.0.1:27017/CRUD");
 
 app.get('/', (req, res) => {
     UserModel.find({})
@@ -52,6 +52,6 @@ app.post('/createUser', (req, res) => {
     .catch(err => res.json(err))
 })
 
-app.listen(3001, () => {
+app.listen(3002, () => {
     console.log("server is running")
 })

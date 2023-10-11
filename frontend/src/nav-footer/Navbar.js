@@ -7,7 +7,7 @@ function Navbar() {
     <div className='navbar'>
         <a href="/">TTC</a>
         <div className="navlink">
-            <Link to="/">Users</Link>
+            <Link to="/login">Connexion</Link>
         </div>
     </div>
   )

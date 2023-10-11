@@ -13,7 +13,7 @@ export default function Dashboard() {
                 <div className="myLink">
                     
                     <form > <Link to="/admin"> Liste Admins</Link></form>
-                    <form > <Link to="/admin"> Liste Admins</Link></form>
+                    <form > <Link to="/users"> Liste Voitures</Link></form>
                     
                 </div>
             </div>

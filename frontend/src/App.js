@@ -5,6 +5,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Update from './register/Update';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import Users from'./component/Users';
+import HomeClient from './Frontclient/HomeClient';
+import CreateUser from './component/CreateUser';
+
+
 function App() {
   return (
    <>
@@ -16,7 +21,11 @@ function App() {
     <Route path='/login' element={<Login/>}></Route>
     <Route path='/dashboard' element={<Dashboard/>}></Route>
     <Route path='/admin' element={<Admin/>}></Route>
+    <Route path='/users' element={<Users/>}></Route>
+    <Route path='/homeClient' element={<HomeClient/>}></Route>
+    <Route path='/create' element={<CreateUser />}></Route>
     
+
    </Routes>
    </BrowserRouter>
    </>

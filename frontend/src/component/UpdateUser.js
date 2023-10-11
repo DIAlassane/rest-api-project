@@ -15,7 +15,7 @@ function UpdateUser() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    axios.get('http://localhost:3001/getUser/'+id)
+    axios.get('http://localhost:3002/getUser/'+id)
     .then(result => {
       console.log(result)
       setMarque(result.data.name)
@@ -32,7 +32,7 @@ function UpdateUser() {
 
   const Update = (e) => {
     e.preventDefault()
-    axios.put("http://localhost:3001/updateUser/"+id, {
+    axios.put("http://localhost:3002/updateUser/"+id, {
       marque,
       modele,
       prix,
