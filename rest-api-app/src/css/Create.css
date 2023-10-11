@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.backcolor {
+    width: 100%;
+    height: 100vh;
+    background-color: #aeb4ba87;
+    padding: 10%;
+}
+
+.ajouter {
+    background-color: #389738;
+    border: 0.4px solid #266126;
+    border-radius: 5px 5px 0 0;
+}
+
+form {
+    width: 80%;
+    margin: 5% 10%;
+    justify-content: center;
+    text-align: center;
+}
+
+form h2 {
+    font-size: 1.7rem;
+    padding: 1rem;
+    font-weight: 900;
+}
+
+.hautediv {
+    width: 50%;
+    margin-left: 25%;
+    padding: 0.3rem;
+}
+
+input {
+    margin: 0.2rem;
+    padding: 0.3rem;
+    border: 1px solid #266126;
+    border-radius: 3px;
+}
+
+::placeholder {
+    color: black;
+}
+
+form button {
+    padding: 0.3rem 5rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #266126;
+    cursor: pointer;
+    transition: 1.5s ease-in-out;
+}
+
+form button:hover {
+    color: white;
+}

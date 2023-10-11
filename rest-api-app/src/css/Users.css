@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carlist {
+    width: 90%;
+    margin: 5%;
+    border: 0.1rem solid #266126;
+    border-radius: 6.5px 6.5px 0 0;
+}
+
+.carlist h2 {
+    justify-content: center;
+    text-align: center;
+    background-color: #00000079;
+    padding: 0.5rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.carlist a {
+    margin-left: 2rem;
+    background-color: #389738;
+    border: 0.5px solid #266126;
+    padding: 0.2rem;
+    text-decoration: none;
+    margin: 0.5rem;
+    color: white;
+    border-radius: 7px;
+}
+
+table {
+    width: 90%;
+    margin-left: 2%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+th {
+    border: 1px solid black;
+    margin: 0;
+    padding: 0.2rem;
+    justify-content: left;
+    text-align: left;
+}
+
+td {
+    border: 0.5px solid black;
+    padding: 0.03rem;
+}
+
+td:last-child {
+    border: none;
+    display: flex;
+}
+
+.delete {
+    background-color: red;
+    border: 0.5px solid #266126;
+    padding: 0.1rem;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 1.5s ease-in-out;
+}
+
+.delete:hover {
+    background-color: #691b1b;
+    border-radius: 0;
+}
+
+tr td {
+    font-size: 0.8rem;
+    border: 0.5px solid #266126;
+}
+
+tr td:nth-child(8){
+    width: 20%;
+    font-size: 0.5rem;
+    padding: 0.1rem;
+}
