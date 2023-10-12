@@ -3,6 +3,7 @@ const express = require('express'); // Importer Express
 const cors = require('cors'); // Middleware CORS pour autoriser les requêtes cross-origin
 const mongoose = require('mongoose'); // Mongoose pour la gestion de la base de données MongoDB
 const UtilisateurModel = require('./model/utilisateur'); // Importer le modèle utilisateur
+const bcrypt = require('bcrypt')
 
 // Initialiser l'application Express
 const app = express(); // Créer une instance d'Express
@@ -58,12 +59,12 @@ app.delete('/delete/:id',(req, res)=>{
 
 // Route pour gérer l'authentification (LOGIN) des utilisateurs
 app.post('/login',(req, res)=>{
-    const {email, password} = req.body; // Récupérer les paramètres de la requête
+    const {email, password} = req.body; // Récupérer les paramètres de la requête de notre front
     UtilisateurModel.findOne({email})
     .then(clients => {
         if(clients) {
-            if(clients.password === password) {
-                res.json("Success") // Authentification réussie
+            if(bcrypt.compare(password, clients.password)) {
+                res.json("success") // Authentification réussie
             } else {
                 res.json("the password is incorrect") // Mot de passe incorrect
             } 

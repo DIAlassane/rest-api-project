@@ -14,17 +14,17 @@ function Login() {
         e.preventDefault();
         axios.post('http://localhost:3001/login', { email, password })
             .then(result => {
-                console.log(result);navigate("/dashboard")
-                    window.location.reload();
+                console.log(result);
                 if (result.data === "success") {
                     console.log(result.data)
-                    
+                    navigate("/dashboard")
+                }
+                else {console.log("no success")
                 }
             })
             .catch(err => console.log(err));
 
-       // navigate("/dashboard")
-        //window.location.reload();
+      
     }
 
     return (
